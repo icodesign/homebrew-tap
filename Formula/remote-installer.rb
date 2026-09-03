@@ -1,15 +1,15 @@
 class RemoteInstaller < Formula
-  desc "Share a signed iOS build over a temporary HTTPS tunnel"
+  desc "Share signed iOS and Android builds over a temporary HTTPS tunnel"
   homepage "https://github.com/icodesign/remote-installer"
-  version "0.1.3"
+  version "0.2.0"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/icodesign/remote-installer/releases/download/v0.1.3/remote-installer-0.1.3-darwin-arm64.tar.gz"
-    sha256 "dfdce4d10de7a6d57422fbb0da3fa8d7eec5d31db10fc410a9e281c8a8c9d387"
+    url "https://github.com/icodesign/remote-installer/releases/download/v0.2.0/remote-installer-0.2.0-darwin-arm64.tar.gz"
+    sha256 "7109c86ef3ff89fb2e221fff22f4a3b4ae13c696dfbec41e3a8c4d1b9f246540"
   elsif Hardware::CPU.intel?
-    url "https://github.com/icodesign/remote-installer/releases/download/v0.1.3/remote-installer-0.1.3-darwin-x86_64.tar.gz"
-    sha256 "31276ced9102f5e7a63a095a87ecb1b182a3e6f031109a5eb31fae26f167c020"
+    url "https://github.com/icodesign/remote-installer/releases/download/v0.2.0/remote-installer-0.2.0-darwin-x86_64.tar.gz"
+    sha256 "eb386b57a0d19ef87c064ed809e6e052a1ca3d2d1c2aac58df88bd22da4e0243"
   else
     odie "remote-installer only provides macOS arm64 and x86_64 binaries"
   end
